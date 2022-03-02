@@ -1,0 +1,21 @@
+footer{
+    background-color: #313131;
+    color: white;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: x-large;
+}
+footer a {
+    text-decoration: none;
+    color: tomato;
+}
+footer a:hover {
+    text-decoration: underline;
+    
+}
+
+.logo{
+    width: 40px;
+}
