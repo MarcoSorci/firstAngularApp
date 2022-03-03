@@ -10,10 +10,11 @@ import { ToDoListComponent } from './components/to-do-list/to-do-list.component'
 import { DoneListComponent } from './components/done-list/done-list.component';
 import { TaskInputComponent } from './components/task-input/task-input.component';
 import { FilterComponent } from './components/filter/filter.component';
-import { StatisticsComponent } from './statistics/statistics.component';
+import { StatisticsComponent } from './components/statistics/statistics.component';
+import { TaskListElementComponent } from './components/task-list-element/task-list-element.component';
 @NgModule({
   declarations: [          //declared components
-    AppComponent, HeaderComponent, FooterComponent, WrapperComponent, ToDoListComponent, DoneListComponent, TaskInputComponent, FilterComponent, StatisticsComponent
+    AppComponent, HeaderComponent, FooterComponent, WrapperComponent, ToDoListComponent, DoneListComponent, TaskInputComponent, FilterComponent, StatisticsComponent, TaskListElementComponent
   ],
   imports: [                //declared requirements
     BrowserModule,
