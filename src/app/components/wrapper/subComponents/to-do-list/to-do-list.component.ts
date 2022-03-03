@@ -22,4 +22,14 @@ export class ToDoListComponent implements OnInit {
   ngOnInit(): void {
   }
 
+
+  taskDeleted(id: string){
+    let tempArray = []
+    for (const task of this.taskList) {
+      if (task.id !== id) {
+        tempArray.push(task)
+      }
+    }
+    this.taskList = tempArray
+  }
 }
