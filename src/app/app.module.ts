@@ -13,6 +13,14 @@ import { FilterComponent } from './components/wrapper/subComponents/filter/filte
 import { StatisticsComponent } from './components/wrapper/subComponents/statistics/statistics.component';
 import { TaskListElementComponent } from './components/wrapper/subComponents/task-list-element/task-list-element.component';
 import { WelcomeComponent } from './components/welcome/welcome.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import { MatToolbarModule } from '@angular/material/toolbar';
+import {MatIconModule} from '@angular/material/icon';
+import {MatButtonModule} from '@angular/material/button';
+import {MatExpansionModule} from '@angular/material/expansion';
+import { HttpClientModule } from '@angular/common/http';
+
 @NgModule({
   declarations: [
     //declared components
@@ -32,6 +40,12 @@ import { WelcomeComponent } from './components/welcome/welcome.component';
     //declared requirements
     BrowserModule,
     AppRoutingModule,
+    BrowserAnimationsModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatButtonModule,
+    MatExpansionModule,
+    HttpClientModule  
   ],
   providers: [],
   bootstrap: [AppComponent], //the starting component

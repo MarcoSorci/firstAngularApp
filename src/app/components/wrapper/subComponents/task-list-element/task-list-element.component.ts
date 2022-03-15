@@ -21,6 +21,6 @@ export class TaskListElementComponent implements OnInit {
     if (this.task) {
        this.doneEvent.emit(this.task.id)
     }
-   
   }
+
 }
