@@ -20,10 +20,11 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
 import {MatExpansionModule} from '@angular/material/expansion';
 import { HttpClientModule } from '@angular/common/http';
+import {MatSidenavModule} from '@angular/material/sidenav';
 
 @NgModule({
   declarations: [
-    //declared components
+    //components
     AppComponent,
     HeaderComponent,
     FooterComponent,
@@ -37,7 +38,7 @@ import { HttpClientModule } from '@angular/common/http';
     WelcomeComponent,
   ],
   imports: [
-    //declared requirements
+    //requirements
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
@@ -45,7 +46,8 @@ import { HttpClientModule } from '@angular/common/http';
     MatIconModule,
     MatButtonModule,
     MatExpansionModule,
-    HttpClientModule  
+    HttpClientModule,
+    MatSidenavModule  
   ],
   providers: [],
   bootstrap: [AppComponent], //the starting component

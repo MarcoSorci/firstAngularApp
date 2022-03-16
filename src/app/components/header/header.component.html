@@ -1,11 +1,10 @@
 <header>
     <mat-toolbar color="primary">
-        
+      <button mat-icon-button (click)="menuClick()" *ngIf="this.router.url !== '/welcome'">
+        <mat-icon>menu</mat-icon>
+      </button>
         <span>Sooper To-Do List</span>
-        <span class="example-spacer"></span>
-        <button mat-icon-button class= "favorite-icon">
-          <mat-icon>thumb_down</mat-icon>
-        </button>
+        <span class="spacer"></span>
         <button mat-icon-button>
           <mat-icon>share</mat-icon>
         </button>

@@ -1,10 +1,9 @@
 .container{
     display: grid;
-    grid-template-columns: 7fr 3fr;
     grid-template-rows: 10vh 50vh 40vh;
-    grid-template-areas: "input filt"
-                         "todo filt"
-                         "done stats";
+    grid-template-areas: "input"
+                         "todo"
+                         "done";
 }
 
 .todo{
@@ -21,6 +20,10 @@ grid-area: filt;
 
 .stats{
 grid-area: stats;
+}
+
+.sidenav{
+height: fit-content;
 }
 
 @media (max-width: 600px){

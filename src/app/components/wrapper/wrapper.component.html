@@ -1,7 +1,15 @@
-<div class="container">
-    <app-to-do-list class="todo"></app-to-do-list>
-    <app-done-list class="done"></app-done-list>
-    <app-task-input class="input"></app-task-input>
-    <app-filter class="filt"></app-filter>
-    <app-statistics class="stats"></app-statistics>
-</div>
+<mat-drawer-container autosize>
+    <mat-drawer #drawer class="sidenav" mode="side" position="end" opened={{commService.isDrawerOpen.value}}>
+        <p>here comes draweryyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy!</p>
+        <app-filter class="filt"></app-filter>
+        <app-statistics class="stats"></app-statistics>
+    </mat-drawer>
+    <mat-drawer-content class="container">
+        <app-to-do-list class="todo"></app-to-do-list>
+        <app-done-list class="done"></app-done-list>
+        <app-task-input class="input"></app-task-input>
+
+    </mat-drawer-content>
+</mat-drawer-container>
+
+<!-- if /welcome remove button -->
