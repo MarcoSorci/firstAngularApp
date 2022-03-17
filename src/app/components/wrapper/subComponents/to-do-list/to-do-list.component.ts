@@ -14,17 +14,16 @@ export class ToDoListComponent implements OnInit {
 
   ngOnInit(): void {
     this.taskService
-      .getActiveTask()
+      .getActiveTasks()
       .subscribe((taskList) => (this.taskList = taskList));
   }
 
-  taskDeleted(id: string) {
-    let tempArray = [];
-    for (const task of this.taskList) {
-      if (task.id !== id) {
-        tempArray.push(task);
-      }
-    }
-    this.taskList = tempArray;
+  taskDone(task: Task) {
+    this.taskService.taskDone(task)
+    // let tempArray = [];
+    // for (const taskelem of this.taskList) {
+      
+    // }
+    // this.taskList = tempArray;
   }
 }

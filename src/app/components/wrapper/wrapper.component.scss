@@ -1,40 +1,16 @@
-.container{
-    display: grid;
-    grid-template-rows: 10vh 50vh 40vh;
-    grid-template-areas: "input"
-                         "todo"
-                         "done";
+.todo {
+  min-height: 300px;
 }
 
-.todo{
-grid-area: todo;
+.done {
+  min-height: 300px;
 }
 
-.done{
-grid-area: done;
+.input {
+    min-height: 100px;
 }
 
-.filt{
-grid-area: filt;
-}
-
-.stats{
-grid-area: stats;
-}
-
-.sidenav{
-height: fit-content;
-}
-
-@media (max-width: 600px){
-    .container{
-        grid-template-columns: 100%;
-        grid-template-rows: 10vh 30vh 50vh 40vh 20vh;
-        grid-template-areas: "input"
-                             "filt"
-                             "todo"
-                             "done"
-                             "stats";
-    }
-    
+.sidenav {
+  height: fit-content;
+  min-width: 20vw;
 }

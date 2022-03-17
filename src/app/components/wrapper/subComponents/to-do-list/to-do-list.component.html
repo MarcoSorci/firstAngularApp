@@ -1,5 +1,5 @@
 <div class="container">
-   <app-task-list-element *ngFor="let task of taskList" [task]="task" (doneEvent)="taskDeleted($event)">  
+   <app-task-list-element *ngFor="let task of taskList" [task]="task" (doneEvent)="taskDone($event)">  
      <!--  for loop in html, $event gives the id in this case since it was sent by the component -->
   </app-task-list-element>
 </div>

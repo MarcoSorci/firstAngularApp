@@ -10,11 +10,9 @@ import { ApiService } from 'src/app/services/api.service';
 export class DoneListComponent implements OnInit {
   doneList: Task[] = [];
 
-  constructor(private taskService: ApiService) {}
+  constructor(public taskService: ApiService) {}
 
   ngOnInit(): void {
-    this.taskService
-      .getDoneTask()
-      .subscribe((doneList) => (this.doneList = doneList));
+    this.taskService.getDoneTasks().subscribe((doneList) => (this.doneList = doneList));
   }
 }
