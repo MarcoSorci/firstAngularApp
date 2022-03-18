@@ -29,6 +29,18 @@ export class Task {
     this.id = id;
   }
 
+  toDatabaseModel() {
+    const dbObj: any = {  //needs any because you can't add new properties
+      id: this.id,
+      name: this.name,
+      creationDate: this.creationDate.getTime(),
+    };
+    if (this.doneDate) {
+      dbObj.doneDate = this.doneDate.getTime();
+    }
+    return dbObj;
+  }
+
   static getFirstNumber(fullNumber: number): number {
     const firstDigitStr = String(fullNumber)[0];
     return Number(firstDigitStr);

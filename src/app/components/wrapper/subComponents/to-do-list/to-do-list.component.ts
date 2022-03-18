@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Task } from 'src/app/model/task';
 import { ApiService } from 'src/app/services/api.service';
+import { Api2Service } from 'src/app/services/api2.service';
 
 @Component({
   selector: 'app-to-do-list',
@@ -10,7 +11,7 @@ import { ApiService } from 'src/app/services/api.service';
 export class ToDoListComponent implements OnInit {
   taskList: Task[] = []; //type name + [] to make array with type
 
-  constructor(private taskService: ApiService) {}
+  constructor(private taskService: ApiService, private api2S:Api2Service) {}
 
   ngOnInit(): void {
     this.taskService
@@ -19,11 +20,10 @@ export class ToDoListComponent implements OnInit {
   }
 
   taskDone(task: Task) {
-    this.taskService.taskDone(task)
-    // let tempArray = [];
-    // for (const taskelem of this.taskList) {
-      
-    // }
-    // this.taskList = tempArray;
+    this.taskService.taskDone(task).subscribe((b) => {
+      if (!b) {
+        prompt('errr');
+      }
+    });
   }
 }

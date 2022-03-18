@@ -15,4 +15,12 @@ export class DoneListComponent implements OnInit {
   ngOnInit(): void {
     this.taskService.getDoneTasks().subscribe((doneList) => (this.doneList = doneList));
   }
+
+  taskDelete(task: Task) {
+    this.taskService.deleteTask(task.id).subscribe((b) => {
+      if (!b) {
+        prompt('errr');
+      }
+    });
+  }
 }

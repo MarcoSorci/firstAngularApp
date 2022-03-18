@@ -2,4 +2,16 @@
     width: 100%;
     height: 10vh;
     background-color: gold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+mat-form-field{
+    background-color: #232323;
+    padding-bottom: 0px;
+}
+
+.example-form-field{
+    margin: 0px 8px;
 }

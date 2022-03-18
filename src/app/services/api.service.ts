@@ -12,7 +12,7 @@ export class ApiService {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' }),
   };
 
-  private readonly apiUrl = 'https://6229de55be12fc4538aa6c8e.mockapi.io/task/';
+  private readonly apiUrl = 'https://623436dd6d5465eaa51607ba.mockapi.io/task';
 
   public allTasks$ = new BehaviorSubject<Task[]>([]);
 

@@ -15,10 +15,10 @@ export class TaskListElementComponent {
     this.doneEvent = new EventEmitter<Task>();
   }
 
-  taskDone(){
+  taskClicked(event:any) {
     if (this.task) {
-       this.doneEvent.emit(this.task)
+      this.doneEvent.emit(this.task);
     }
+    event.stopPropagation();
   }
-
 }
